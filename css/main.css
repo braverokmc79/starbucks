@@ -11,11 +11,11 @@ img{ display: block;}
 
 /* HEADER */
 header{
- background-color: royalblue;
+ background-color: #f6f5f0;
+ border-bottom: 1px solid #c8c8c8;
 }
 
 header .inner{
- background-color: orange;
  width: 1100px;
  height: 120px;
  margin: 0 auto;
@@ -29,13 +29,16 @@ header .logo{
     bottom: 0;
     left: 0;
     margin: auto;
-    display: none;
 }
 
 header .logo img{
 }
 
 header .sub-menu{
+    display: flex;
+    right: 0;
+    position: absolute;
+    top: 10px;
 }
 
 header .sub-menu  ul.menu{
@@ -75,16 +78,43 @@ header .sub-menu  ul.menu li a:hover{
 }
 
 header .sub-menu  .search{
+    border-color: red;
+    height: 34px;
+    position: relative;
 }
 
 header .sub-menu  .search input{
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777;
+    transition: width .4s;
+    font-size: 12px;
+}
+
+header .sub-menu  .search input:focus {
+    width: 190px;
+    border-color: #669900;
 }
 
 header .sub-menu  .search .material-icons{
-
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    right: 5px;
+    transition: .4s;
 }
 
-
+header .sub-menu  .search.focused .material-icons{
+    opacity: 0;
+}
 
 
 
