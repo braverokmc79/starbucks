@@ -19,10 +19,30 @@ searchInputEl.addEventListener('blur', function(){
 
 
 
-const badgeEl=searchEl.querySelector("header .badges");
+//const badgeEl=searchEl.querySelector("header .badges");
+const badgeEl=$("header .badges");
 
-window.addEventListener("scroll", function(){
-      console.log('scroll!!' ,window.screenY);
+window.addEventListener("scroll", _.throttle(function(){
+    //console.log("scroll!! ", window.scrollY);
+    if(window.scrollY > 500){
+        //배지 숨기기
+        //$(".badges").hide();
+        //gsap.to(요소, 지속시간,옵션);
+       gsap.to(badgeEl, .6, {
+            opacity:0,
+            display:'none'
+        });
 
+    }else{
+        //배지 보이기
+       // $(".badges").show();
+       gsap.to(badgeEl, .6, 
+        {
+            opacity:1,
+            display:'block'
+        });
+    }
+    
+}, 500));
+//_.throttle(함수,시간)
 
-});
