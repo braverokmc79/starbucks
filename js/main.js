@@ -17,3 +17,12 @@ searchInputEl.addEventListener('blur', function(){
     searchInputEl.setAttribute('placeholder',"");
 });
 
+
+
+const badgeEl=searchEl.querySelector("header .badges");
+
+window.addEventListener("scroll", function(){
+      console.log('scroll!!' ,window.screenY);
+
+
+});
