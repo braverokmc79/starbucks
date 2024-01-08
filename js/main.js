@@ -92,3 +92,24 @@ new Swiper(".promotion .swiper-container .swiper", {
         prevEl: ".promotion .swiper-button-prev",
     }
 });
+
+
+// const promotionEl=document.querySelector(".promotion");
+// //const promotionToggleBtn=promotionEl.querySelector(".toggle-promotion");
+// const promotionToggleBtn=$(".toggle-promotion")
+// let isHidePromotion=false;
+
+
+$(function(){
+    let isHidePromotion=false;
+    $(".toggle-promotion").on("click", function(){
+        isHidePromotion=!isHidePromotion;
+        if(isHidePromotion){
+            $(".promotion").addClass("hide");
+            return;
+        }else{
+            $(".promotion").removeClass("hide");
+        }
+    });
+
+});
