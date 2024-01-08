@@ -58,9 +58,37 @@ fadeEls.forEach(function(fadeEl, index){
 });
 
 
-// const swiperSlideEls=document.querySelectorAll('#mySwiper .swiper-slide');
-// swiperSlideEls.forEach(function(swiperSlideEl, index){
-//      gsap.to(swiperSlideEl, 1, {
-        
-//     });
-// });
+new Swiper(".notice .notice-line .swiper-container .swiper", {
+    direction: "vertical",
+    slidesPerView: 1,
+    spaceBetween: 3,
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   clickable: true,
+    // },
+});
+
+new Swiper(".promotion .swiper-container .swiper", {    
+    slidesPerView: 3, //한번에 보여줄 슬라이드 개수
+    spaceBetween:10,  //슬라이드 사이 여백
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 5500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".promotion  .swiper-pagination",
+      clickable: true,  //사용자의 페이지 번호 요소 제어 가능 여부
+    },
+    navigation:{
+        nextEl: ".promotion .swiper-button-next",
+        prevEl: ".promotion .swiper-button-prev",
+    }
+});
