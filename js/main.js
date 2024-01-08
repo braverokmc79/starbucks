@@ -56,3 +56,11 @@ fadeEls.forEach(function(fadeEl, index){
     });
 
 });
+
+
+// const swiperSlideEls=document.querySelectorAll('#mySwiper .swiper-slide');
+// swiperSlideEls.forEach(function(swiperSlideEl, index){
+//      gsap.to(swiperSlideEl, 1, {
+        
+//     });
+// });
