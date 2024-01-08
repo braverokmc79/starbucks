@@ -80,7 +80,7 @@ new Swiper(".promotion .swiper-container .swiper", {
     loop: true,
     centeredSlides: true,
     autoplay: {
-      delay: 5500,
+      delay: 555500,
       disableOnInteraction: false,
     },
     pagination: {
