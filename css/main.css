@@ -423,8 +423,6 @@ header .badges .badge{
     color: #fff;
 }    
 
-
-
 .notice .notice-line .inner__left .notice-line__more{
     width: 62px;
     height: 62px;
@@ -465,3 +463,19 @@ header .badges .badge{
 }
 
 
+.notice .promotion{
+    height: 693px;
+    background-color: #f6f5ef; 
+    position: relative;
+}
+.notice .promotion  .swiper-container{
+    width: calc(819px*3 + 20px);
+    height: 553px;
+    background-color: orange;
+    font-size: 200px;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: calc((819px*3 + 20px) / -2);
+}
