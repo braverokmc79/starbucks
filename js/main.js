@@ -80,7 +80,7 @@ new Swiper(".promotion .swiper-container .swiper", {
     loop: true,
     centeredSlides: true,
     autoplay: {
-      delay: 555500,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -92,6 +92,24 @@ new Swiper(".promotion .swiper-container .swiper", {
         prevEl: ".promotion .swiper-button-prev",
     }
 });
+
+
+new Swiper(".awards .swiper-container .swiper", {    
+    slidesPerView: 5, //한번에 보여줄 슬라이드 개수
+    spaceBetween:30,  //슬라이드 사이 여백
+    loop: true,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },   
+    navigation:{
+        nextEl: ".awards .swiper-button-next",
+        prevEl: ".awards .swiper-button-prev",
+    }
+});
+
+
 
 
 // const promotionEl=document.querySelector(".promotion");
