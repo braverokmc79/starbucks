@@ -22,6 +22,7 @@ searchInputEl.addEventListener('blur', function(){
 //const badgeEl=searchEl.querySelector("header .badges");
 const badgeEl=$("header .badges");
 
+
 window.addEventListener("scroll", _.throttle(function(){
     //console.log("scroll!! ", window.scrollY);
     if(window.scrollY > 500){
@@ -33,6 +34,12 @@ window.addEventListener("scroll", _.throttle(function(){
             display:'none'
         });
 
+        //버튼 보이기!
+        gsap.to("#to-top",.2, {
+            x:0,            
+        });
+
+
     }else{
         //배지 보이기
        // $(".badges").show();
@@ -41,10 +48,26 @@ window.addEventListener("scroll", _.throttle(function(){
             opacity:1,
             display:'block'
         });
-    }
-    
-}, 500));
+
+        //버튼 숨기기!
+        gsap.to("#to-top",.2, {
+            x:100,            
+        });
+
+    }    
+}, 300));
 //_.throttle(함수,시간)
+
+
+function toTop(event){
+    console.log(event);
+    gsap.to(window,.7, {
+        scrollTo:0,            
+    });
+}
+
+
+
 
 const fadeEls=document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function(fadeEl, index){
@@ -56,6 +79,8 @@ fadeEls.forEach(function(fadeEl, index){
     });
 
 });
+
+
 
 
 new Swiper(".notice .notice-line .swiper-container .swiper", {
@@ -167,16 +192,7 @@ spyEls.forEach(function(spyEl, index){
 });
 
 
-
-
 const thisYear =document.querySelector(".this-year");
 thisYear.textContent = new Date().getFullYear();
-
-
-
-
-
-
-
 
 
