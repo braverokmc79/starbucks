@@ -1,24 +1,3 @@
-const searchEl= document.querySelector('.search');
-const searchInputEl=searchEl.querySelector("input");
-
-
-searchEl.addEventListener('click', function(){
-    searchInputEl.focus();
-});
-
-searchInputEl.addEventListener('focus', function(){
-    searchEl.classList.add('focused');
-    searchInputEl.setAttribute('placeholder',"통합검색");
-});
-
-
-searchInputEl.addEventListener('blur', function(){
-    searchEl.classList.remove('focused');
-    searchInputEl.setAttribute('placeholder',"");
-});
-
-
-
 //const badgeEl=searchEl.querySelector("header .badges");
 const badgeEl=$("header .badges");
 
@@ -192,21 +171,3 @@ spyEls.forEach(function(spyEl, index){
 });
 
 
-const thisYear =document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear();
-
-
-
-$.ajax({
-      url:"",
-      data:{},
-      type:"post",
-      dataType:"json",
-      success:function(data){
-        console.log("data : ",data);
-      },
-      error:function(error){
-        console.log("error : ",error);
-      }
-
-    });
