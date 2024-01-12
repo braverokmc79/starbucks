@@ -197,3 +197,16 @@ thisYear.textContent = new Date().getFullYear();
 
 
 
+$.ajax({
+      url:"",
+      data:{},
+      type:"post",
+      dataType:"json",
+      success:function(data){
+        console.log("data : ",data);
+      },
+      error:function(error){
+        console.log("error : ",error);
+      }
+
+    });
